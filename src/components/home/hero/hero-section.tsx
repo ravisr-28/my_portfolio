@@ -30,7 +30,7 @@ export default function HeroSection() {
                     border-4 border-white dark:border-gray-900
                     shadow-lg overflow-hidden">
                     <Image
-                        src="/profile/mohit.jpeg"
+                        src="/profile/mohit-dp.jpeg"
                         alt="Profile Photo"
                         width={128}
                         height={128}

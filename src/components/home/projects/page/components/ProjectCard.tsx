@@ -134,7 +134,7 @@ export default function ProjectCard({ project, index, getProjectTypeIcon }: Proj
 
                 {/* View Details Button */}
                 <Link
-                    href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/projects/${project.id}`}
                     className="flex items-center justify-center w-full py-1.5 sm:py-2 px-3 sm:px-4 rounded-sm text-center font-medium
                         bg-gray-100 text-xs sm:text-sm dark:bg-gray-700/50 text-gray-800 dark:text-white
                         border border-gray-200 dark:border-gray-600/50

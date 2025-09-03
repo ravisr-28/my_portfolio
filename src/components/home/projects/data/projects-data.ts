@@ -5,6 +5,7 @@ import { FaDesktop } from "react-icons/fa";
 
 export const projectsData: Project[] = [
     {
+        id: "techpathfinder",
         title: "TechPathFinder",
         subtitle: "Event Management Platform",
         projectType: "website",
@@ -38,6 +39,7 @@ export const projectsData: Project[] = [
         }
     },
     {
+        id: "insightsEd",
         title: "InsightsEd",
         subtitle: "AI-Powered Study Notes Generator",
         projectType: "ai",
@@ -70,6 +72,7 @@ export const projectsData: Project[] = [
         }
     },
     {
+        id: "maxMovie",
         title: "Max Movie",
         subtitle: "Web Application for Movie Reviews",
         projectType: "website",

@@ -13,12 +13,12 @@ import ProjectChallenges from './components/ProjectChallenges'
 import ProjectImpact from './components/ProjectImpact'
 import { motion, AnimatePresence } from 'framer-motion'
 
-interface ProjectDetailsPageProps {
-    projectId: string
-}
 
-export default function ProjectDetailsPage({ projectId }: ProjectDetailsPageProps) {
+export default function ProjectDetailsPage({ projectId }: { projectId: string }) {
+
+
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+
     const project = projectsData.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === projectId)
 
     if (!project) {

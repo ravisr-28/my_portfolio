@@ -1,4 +1,5 @@
 export interface Project {
+    id: string;
     title: string;
     subtitle: string;
     projectType: 'website' | 'ai' | 'app';
