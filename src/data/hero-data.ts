@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaHackerrank } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export const socialLinks = [
     {
@@ -21,5 +22,16 @@ export const socialLinks = [
             icon: FaInstagram,
             href: "https://instagram.com/mohitxcodes",
             label: "Instagram"
+        },
+        {
+            icon : SiLeetcode,
+            href:"https://leetcode.com/mohitxcodes",
+            label:"Leetcode"
+        },
+        {
+            icon:FaHackerrank,
+            href:"https://www.hackerrank.com/mohitxcodes",
+            label:"Hackerrank"
         }
+
     ]
