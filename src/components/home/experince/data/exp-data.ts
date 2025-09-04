@@ -1,16 +1,35 @@
 import { SiMongodb, SiExpress, SiJavascript, SiReact, SiTypescript, SiHtml5, SiCss3, SiTailwindcss } from "react-icons/si";
 import { IExperience} from "@/types/exp-types";
-import { SiNodedotjs } from "react-icons/si";
+import { SiNodedotjs, SiFlutter, SiFirebase, SiDart } from "react-icons/si";
 
 export const experiences: IExperience[] = [
+    {
+        company: "FBoost Agro Pvt. Ltd.",
+        role: "Software Developer",
+        companyLogo: "#",
+        time: "1 Month",
+        duration: "Apirl 2025 - May 2025",
+        location: "Remote",
+        companyUrl: "#",
+        type: "Internship",
+        technologies: [
+            { name: "Flutter", icon: SiFlutter, color: "text-blue-400" },
+            { name: "Firebase", icon: SiFirebase, color: "text-orange-500" },
+            { name: "Hive", icon: SiDart, color: "text-purple-600" },
+            { name: "Dart", icon: SiDart, color: "text-purple-600" },
+            { name: "Firestore", icon: SiFirebase, color: "text-orange-500" },
+        ]
+    }
+    ,
     {
         company: "OCTAPHORES PRIVATE LIMITED",
         role: "Full Stack Developer",
         companyLogo: "exp/octaphores.jpeg",
-        type: "Remote",
+        time: "3 Month",
         duration: "Feb 2025 - April 2025",
         location: "Gurgaon, Haryana",
         companyUrl: "https://octaphores.com/",
+        type: "Internship",
         technologies: [
             { name: "React", icon: SiReact, color: "text-blue-400" },
             { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
@@ -24,10 +43,11 @@ export const experiences: IExperience[] = [
         company: "CSDT IT Solutions",
         companyLogo: "exp/csdt_it_solutions.jpeg",
         role: "Full Stack Trainee",
-        type: "On-site",
+        time: "6 Month",
         duration: "May 2024 - Oct 2024",
         location: "Patna, Bihar",
         companyUrl: "https://www.csdtitsolution.com/",
+        type: "Trainee",
         technologies: [
             { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
             { name: "CSS", icon: SiCss3, color: "text-blue-400" },

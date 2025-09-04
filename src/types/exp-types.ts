@@ -2,10 +2,11 @@ export interface IExperience {
     company: string;
     role: string;
     companyLogo: string;
-    type: string;
+    time: string;
     duration: string;
     location: string;
     companyUrl: string;
+    type: string;
     technologies: ITechnology[];
 }
 

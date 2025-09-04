@@ -1,6 +1,9 @@
 import { FaExternalLinkAlt, FaBuilding, FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import { IExperience, ITechnology } from '@/types/exp-types'
 import Image from 'next/image'
+import { Building } from 'lucide-react'
+import { PiBuilding, PiBuildingApartment, PiBuildingOffice } from 'react-icons/pi'
+import { IoPerson } from 'react-icons/io5'
 export default function ExperienceCard({ exp, index }: { exp: IExperience, index: number }) {
     return (
         <div
@@ -46,23 +49,28 @@ export default function ExperienceCard({ exp, index }: { exp: IExperience, index
                 hover:before:opacity-100">
 
                 {/* Company Link Badge */}
-                <a
-                    href={exp.companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="z-50 absolute top-2 md:top-3 sm:top-4 right-2 md:right-3 sm:right-4 p-1 md:p-1.5 rounded-lg bg-gray-100 dark:bg-gray-700/50
+                {
+                    exp.companyUrl != "#" && (
+                        <a
+                            href={exp.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="z-50 absolute top-2 md:top-3 sm:top-4 right-2 md:right-3 sm:right-4 p-1 md:p-1.5 rounded-lg bg-gray-100 dark:bg-gray-700/50
                     hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-colors duration-300
                     group/link"
-                >
-                    <FaExternalLinkAlt className="text-gray-500 group-hover/link:text-gray-700 
+                        >
+                            <FaExternalLinkAlt className="text-gray-500 group-hover/link:text-gray-700 
                     dark:text-gray-400 dark:group-hover/link:text-gray-200" size={12} />
-                </a>
-
+                        </a>
+                    )
+                }
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4 relative">
                     <div className="rounded-sm bg-gradient-to-br from-gray-100 to-gray-50 
                         dark:from-gray-700/50 dark:to-gray-800/50
                         shadow-sm group-hover:shadow-md transition-shadow duration-300">
-                        <Image src={`/${exp.companyLogo}`} alt={exp.company} className="size-8 md:size-10 rounded-sm" width={40} height={40} />
+                        {exp.companyLogo == "#" ? <PiBuildingOffice className='size-8 md:size-10 p-1 rounded-sm' /> :
+                            <Image src={`/${exp.companyLogo}`} alt={exp.company} className="size-8 md:size-10 rounded-sm" width={40} height={40} />
+                        }
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100
@@ -80,6 +88,11 @@ export default function ExperienceCard({ exp, index }: { exp: IExperience, index
                 {/* Location and Duration */}
                 <div className="flex flex-col md:flex-row flex-wrap items-start md:items-center gap-2 md:gap-4 mb-4 md:mb-6 px-1 md:px-2">
                     <div className="flex items-center gap-1 md:gap-1.5 text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                        <IoPerson className="text-gray-500 group-hover:text-gray-600 
+                            dark:group-hover:text-gray-300 transition-colors duration-300" size={12} />
+                        <span>{exp.type}</span>
+                    </div>
+                    <div className="flex items-center gap-1 md:gap-1.5 text-xs md:text-sm text-gray-600 dark:text-gray-400">
                         <FaMapMarkerAlt className="text-gray-500 group-hover:text-gray-600 
                             dark:group-hover:text-gray-300 transition-colors duration-300" size={12} />
                         <span>{exp.location}</span>
@@ -92,7 +105,7 @@ export default function ExperienceCard({ exp, index }: { exp: IExperience, index
                     <div className="flex items-center gap-1 md:gap-1.5 text-xs md:text-sm text-gray-600 dark:text-gray-400">
                         <FaClock className="text-gray-500 group-hover:text-gray-600 
                             dark:group-hover:text-gray-300 transition-colors duration-300" size={12} />
-                        <span>{exp.type}</span>
+                        <span>{exp.time}</span>
                     </div>
                 </div>
 

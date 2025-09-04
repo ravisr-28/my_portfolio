@@ -71,39 +71,7 @@ export const projectsData: Project[] = [
             extras: "Rate-limiting via express-rate-limit, user-level API quotas, and Swagger docs for public API"
         }
     },
-    {
-        id: "maxMovie",
-        title: "Max Movie",
-        subtitle: "Web Application for Movie Reviews",
-        projectType: "website",
-        description: "A web application that allows users to search for movies and read reviews.",
-        images: [
-            "/projects/max_movie/maxmovie_01.png",
-            "/projects/max_movie/maxmovie_02.png"
-        ],
-        githubUrl: "https://github.com/mohitxcodes/max-movie",
-        liveUrl: "https://max-movie.vercel.app",
-        technologies: ["React", "Tailwind CSS", "Framer Motion", "TMDB API" , "Redux"],
-        featured: false,
-        challenges: [
-            "Handling large movie datasets",
-            "Ensuring fast and accurate search results",
-            "Balancing user reviews and ratings"
-        ],
-        impact: [
-            "Improved movie discovery experience",
-            "Increased user engagement",
-            "Enhanced movie information accessibility"
-        ],
-        role: "Frontend Developer",
-        duration: "2 months",
-        techStack: {
-            frontend: "React + Next.js + Tailwind CSS",
-            backend: "Node.js + Express with MongoDB for data persistence",
-            devops: "CI/CD using GitHub Actions, deployed on Vercel",
-            extras: "Chart.js for data visualization"
-        }
-    },
+    
 {
         id: "yashwantkumar",
         title: "Yashwant Kumar - Portfolio",
@@ -149,7 +117,7 @@ export const projectsData: Project[] = [
         ],
         githubUrl: "#",
         liveUrl: "https://playnex.in",
-        technologies: ["ReactJs","TypeScript", "Tailwind CSS", "Framer Motion", "MongoDB", "Express", "Node.js"],
+        technologies: ["ReactJs","TypeScript", "Tailwind CSS", "MongoDB", "Express", "Node.js"],
         featured: true,
         challenges: [
             "Implementing a robust user authentication system",
@@ -171,39 +139,6 @@ export const projectsData: Project[] = [
         }
     },
 {
-        id: "netspeq-solutions",
-        title: "Netspeq Solutions",
-        subtitle: "Clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript",
-        projectType: "website",
-        description: "A clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript. The website includes features like a homepage, about page, services page, portfolio page, contact page, and a blog section.",
-        images: [
-            "/projects/netspeq/netspeq-01.png",
-            "/projects/netspeq/netspeq-02.png"
-        ],
-        githubUrl: "https://github.com/mohitxcodes/netspeqClone",
-        liveUrl: "https://netspeq-solutions.netlify.app/",
-        technologies: ["ReactJs","TailwindCSS", "JavaScript"],
-        featured: false,
-        challenges: [
-            "Implementing a responsive and user-friendly UI",
-            "Integrating third-party APIs for fetching data",
-            "Handling routing and navigation using React Router"
-        ],
-        impact: [
-            "Building a website that closely resembles the original website",
-            "Improving my skills in ReactJS and TailwindCSS",
-            "Learning how to fetch and display data from third-party APIs"
-        ],
-        role: "Full Stack Developer",
-        duration: "2 weeks",
-        techStack: {
-            frontend: "ReactJS + TailwindCSS",
-            backend: "No backend was used",
-            devops: "CI/CD using GitHub Actions, deployed on Vercel",
-            extras: "No additional libraries or frameworks were used"
-        }
-    },
-    {
         id: "mysgpatracker",
         title: "MySGPATracker",
         subtitle: "A Flutter app for calculating SGPA.",
@@ -267,6 +202,74 @@ export const projectsData: Project[] = [
             extras: "Cloudinary for storing and managing images"
         }
     },
+{
+        id: "netspeq-solutions",
+        title: "Netspeq Solutions",
+        subtitle: "Clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript",
+        projectType: "website",
+        description: "A clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript. The website includes features like a homepage, about page, services page, portfolio page, contact page, and a blog section.",
+        images: [
+            "/projects/netspeq/netspeq-01.png",
+            "/projects/netspeq/netspeq-02.png"
+        ],
+        githubUrl: "https://github.com/mohitxcodes/netspeqClone",
+        liveUrl: "https://netspeq-solutions.netlify.app/",
+        technologies: ["ReactJs","TailwindCSS", "JavaScript"],
+        featured: false,
+        challenges: [
+            "Implementing a responsive and user-friendly UI",
+            "Integrating third-party APIs for fetching data",
+            "Handling routing and navigation using React Router"
+        ],
+        impact: [
+            "Building a website that closely resembles the original website",
+            "Improving my skills in ReactJS and TailwindCSS",
+            "Learning how to fetch and display data from third-party APIs"
+        ],
+        role: "Full Stack Developer",
+        duration: "2 weeks",
+        techStack: {
+            frontend: "ReactJS + TailwindCSS",
+            backend: "No backend was used",
+            devops: "CI/CD using GitHub Actions, deployed on Vercel",
+            extras: "No additional libraries or frameworks were used"
+        }
+    },
+{
+        id: "maxMovie",
+        title: "Max Movie",
+        subtitle: "Web Application for Movie Reviews",
+        projectType: "website",
+        description: "A web application that allows users to search for movies and read reviews.",
+        images: [
+            "/projects/max_movie/maxmovie_01.png",
+            "/projects/max_movie/maxmovie_02.png"
+        ],
+        githubUrl: "https://github.com/mohitxcodes/max-movie",
+        liveUrl: "https://max-movie.vercel.app",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "TMDB API" , "Redux"],
+        featured: false,
+        challenges: [
+            "Handling large movie datasets",
+            "Ensuring fast and accurate search results",
+            "Balancing user reviews and ratings"
+        ],
+        impact: [
+            "Improved movie discovery experience",
+            "Increased user engagement",
+            "Enhanced movie information accessibility"
+        ],
+        role: "Frontend Developer",
+        duration: "2 months",
+        techStack: {
+            frontend: "React + Next.js + Tailwind CSS",
+            backend: "Node.js + Express with MongoDB for data persistence",
+            devops: "CI/CD using GitHub Actions, deployed on Vercel",
+            extras: "Chart.js for data visualization"
+        }
+    },
+    
+
 ]
 
 
