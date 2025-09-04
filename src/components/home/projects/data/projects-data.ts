@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
         githubUrl: "https://github.com/mohitxcodes/max-movie",
         liveUrl: "https://max-movie.vercel.app",
         technologies: ["React", "Tailwind CSS", "Framer Motion", "TMDB API" , "Redux"],
-        featured: true,
+        featured: false,
         challenges: [
             "Handling large movie datasets",
             "Ensuring fast and accurate search results",
@@ -150,7 +150,7 @@ export const projectsData: Project[] = [
         githubUrl: "#",
         liveUrl: "https://playnex.in",
         technologies: ["ReactJs","TypeScript", "Tailwind CSS", "Framer Motion", "MongoDB", "Express", "Node.js"],
-        featured: false,
+        featured: true,
         challenges: [
             "Implementing a robust user authentication system",
             "Designing and implementing a responsive and user-friendly UI",
@@ -170,7 +170,105 @@ export const projectsData: Project[] = [
             extras: "JWT authentication, role-based access control, and third-party API integration"
         }
     },
+{
+        id: "netspeq-solutions",
+        title: "Netspeq Solutions",
+        subtitle: "Clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript",
+        projectType: "website",
+        description: "A clone website of an IT company built on top of ReactJS, TailwindCSS, and JavaScript. The website includes features like a homepage, about page, services page, portfolio page, contact page, and a blog section.",
+        images: [
+            "/projects/netspeq/netspeq-01.png",
+            "/projects/netspeq/netspeq-02.png"
+        ],
+        githubUrl: "https://github.com/mohitxcodes/netspeqClone",
+        liveUrl: "https://netspeq-solutions.netlify.app/",
+        technologies: ["ReactJs","TailwindCSS", "JavaScript"],
+        featured: false,
+        challenges: [
+            "Implementing a responsive and user-friendly UI",
+            "Integrating third-party APIs for fetching data",
+            "Handling routing and navigation using React Router"
+        ],
+        impact: [
+            "Building a website that closely resembles the original website",
+            "Improving my skills in ReactJS and TailwindCSS",
+            "Learning how to fetch and display data from third-party APIs"
+        ],
+        role: "Full Stack Developer",
+        duration: "2 weeks",
+        techStack: {
+            frontend: "ReactJS + TailwindCSS",
+            backend: "No backend was used",
+            devops: "CI/CD using GitHub Actions, deployed on Vercel",
+            extras: "No additional libraries or frameworks were used"
+        }
+    },
+    {
+        id: "mysgpatracker",
+        title: "MySGPATracker",
+        subtitle: "A Flutter app for calculating SGPA.",
+        projectType: "app",
+        description: "A mobile app built using Flutter and Firebase. The app allows students to enter their subject grades and credit hours, and calculates the SGPA (Semester GPA) and cumulative GPA.",
+        images: [
+            "/projects/mysgpatracker/mysgpatracker.png",
+        ],
+        githubUrl: "https://github.com/mohitxcodes/my-sgpa-tracker",
+        liveUrl: "https://play.google.com/store/apps/details?id=com.msxcodes.my_sgpa_tracker",
+        technologies: ["Flutter", "Firebase" , "Dart" , "Hive"],
+        featured: false,
+        challenges: [
+            "Designing and implementing a responsive and user-friendly UI",
+            "Integrating Firebase authentication and database for storing and retrieving data",
+            "Calculating and updating SGPA and cumulative GPA based on user inputs"
+        ],
+        impact: [
+            "Improving the efficiency of calculating SGPA for students",
+            "Providing a convenient and intuitive app for students to use",
+            "Showcasing the versatility of Flutter and Firebase in mobile app development"
+        ],
+        role: "Mobile Developer",
+        duration: "2 weeks",
+        techStack: {
+            frontend: "Flutter",
+            backend: "Firebase for hosting and storing content",
+            devops: "CI/CD using GitHub Actions, deployed on Google Play Store",
+            extras: "No additional libraries or frameworks were used"
+        }
+    },
+{
+        id: "painal",
+        title: "Painal",
+        subtitle: "A Flutter app for village information.",
+        projectType: "app",
+        description: "A mobile app built using Flutter and Firebase. The app allows village residents to view and manage their ancestry, village information, and other relevant data.",
+        images: [
+            "/projects/painal/painal.png",
+        ],
+        githubUrl: "https://github.com/mohitxcodes/painal_app",
+        liveUrl: "https://play.google.com/store/apps/details?id=com.mohitxcodes.painal",
+        technologies: ["Flutter", "Firebase" , "Dart" , "Cloudinary"],
+        featured: false,
+        challenges: [
+            "Designing and implementing a responsive and user-friendly UI",
+            "Integrating Firebase authentication and database for storing and retrieving data",
+            "Managing and organizing village information"
+        ],
+        impact: [
+            "Simplifying the access to village information and ancestry records",
+            "Enabling village residents to manage their personal data",
+            "Showcasing the versatility of Flutter and Firebase in mobile app development"
+        ],
+        role: "Mobile Developer",
+        duration: "2 months",
+        techStack: {
+            frontend: "Flutter",
+            backend: "Firebase for hosting and storing content",
+            devops: "CI/CD using GitHub Actions, deployed on Google Play Store",
+            extras: "Cloudinary for storing and managing images"
+        }
+    },
 ]
+
 
 export const projectTabs = [
                                 { id: 'all', label: 'All Projects', icon: null, color: 'bg-gray-900 dark:bg-gray-100 dark:text-gray-900' },
