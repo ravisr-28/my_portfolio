@@ -104,6 +104,72 @@ export const projectsData: Project[] = [
             extras: "Chart.js for data visualization"
         }
     },
+{
+        id: "yashwantkumar",
+        title: "Yashwant Kumar - Portfolio",
+        subtitle: "Web Application for his personal portfolio",
+        projectType: "website",
+        description: "A web application that showcases Dr. Yashwant Kumar's academic and professional achievements.",
+        images: [
+            "/projects/yk/yk-01.png",
+            "/projects/yk/yk-02.png"
+        ],
+        githubUrl: "https://github.com/mohitxcodes/yk-portfolio",
+        liveUrl: "https://yashwantkumar.com",
+        technologies: ["ReactJs","TypeScript", "Tailwind CSS", "Framer Motion", "Firebase"],
+        featured: false,
+        challenges: [
+            "Designing and implementing a visually appealing and responsive UI",
+            "Integrating content from various sources (Academic papers, Research papers, etc.)",
+            "Optimizing performance and ensuring smooth user experience"
+        ],
+        impact: [
+            "Providing a centralized platform for Dr. Yashwant Kumar's work",
+            "Enhancing his online presence and visibility",
+            "Simplifying access to his academic and professional achievements"
+        ],
+        role: "Frontend Developer",
+        duration: "15-20 Days",
+        techStack: {
+            frontend: "React + Tailwind CSS",
+            backend: "Firebase for hosting and storing content",
+            devops: "CI/CD using GitHub Actions, deployed on Firebase Hosting",
+            extras: "No additional libraries or frameworks were used"
+        }
+    },
+{
+        id: "playnex",
+        title: "PlayNex",
+        subtitle: "Online platform for booking and managing tournaments, matches, and teams",
+        projectType: "website",
+        description: "A web application that enables users to register for tournaments, find teams, and manage their schedules.",
+        images: [
+            "/projects/playnex/playnex-01.png",
+            "/projects/playnex/playnex-02.png"
+        ],
+        githubUrl: "#",
+        liveUrl: "https://playnex.in",
+        technologies: ["ReactJs","TypeScript", "Tailwind CSS", "Framer Motion", "MongoDB", "Express", "Node.js"],
+        featured: false,
+        challenges: [
+            "Implementing a robust user authentication system",
+            "Designing and implementing a responsive and user-friendly UI",
+            "Integrating third-party APIs for team and tournament management"
+        ],
+        impact: [
+            "Simplifying the process of booking tournaments and matches",
+            "Enabling users to find and join teams for their favorite games",
+            "Providing a centralized platform for managing tournament schedules and match results"
+        ],
+        role: "Full Stack Developer",
+        duration: "6 months",
+        techStack: {
+            frontend: "React + Tailwind CSS",
+            backend: "Node.js + Express with MongoDB for data persistence",
+            devops: "CI/CD using GitHub Actions, deployed on Vercel",
+            extras: "JWT authentication, role-based access control, and third-party API integration"
+        }
+    },
 ]
 
 export const projectTabs = [
