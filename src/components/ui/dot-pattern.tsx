@@ -24,7 +24,6 @@ export default function DotPattern({
         mouseY.set(clientY - top);
     }
 
-    // This mask reveals the "highlighted" dots
     const maskImage = useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, white, transparent)`;
 
     return (
@@ -36,7 +35,6 @@ export default function DotPattern({
             onMouseMove={onMouseMove}
             {...props}
         >
-            {/* Base Pattern (Dim) */}
             <div
                 className="absolute inset-0 h-full w-full opacity-[0.15] dark:opacity-[0.1]"
                 style={{
@@ -45,7 +43,6 @@ export default function DotPattern({
                 }}
             />
 
-            {/* Highlight Pattern (Bright, revealed by mask) */}
             <motion.div
                 className="absolute inset-0 h-full w-full opacity-100 dark:opacity-100 text-gray-500 dark:text-gray-400"
                 style={{
