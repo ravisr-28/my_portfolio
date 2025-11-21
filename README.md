@@ -9,13 +9,13 @@ Repository: https://github.com/mohitxcodes/portfolio_v5
 ## 📸 Preview
 
 ### Home Page  
-![Home](img1.png)
+![Home](./public/readme/img1.png)
 
 ### Projects Section  
-![Projects](img2.png)
+![Projects](./public/readme/img2.png)
 
 ### Contact Page  
-![Contact](img3.png)
+![Contact](./public/readme/img3.png)
 
 ---
 
