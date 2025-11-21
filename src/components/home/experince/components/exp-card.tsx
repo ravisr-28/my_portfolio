@@ -1,8 +1,7 @@
 import { FaExternalLinkAlt, FaBuilding, FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import { IExperience, ITechnology } from '@/types/exp-types'
 import Image from 'next/image'
-import { Building } from 'lucide-react'
-import { PiBuilding, PiBuildingApartment, PiBuildingOffice } from 'react-icons/pi'
+import { PiBuildingOffice } from 'react-icons/pi'
 import { IoPerson } from 'react-icons/io5'
 export default function ExperienceCard({ exp, index }: { exp: IExperience, index: number }) {
     return (

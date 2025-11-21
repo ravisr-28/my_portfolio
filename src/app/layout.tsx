@@ -5,6 +5,8 @@ import Header from '@/layouts/header/header'
 import Footer from "@/layouts/footer/footer";
 import ContentWrapper from "@/core/common/content-wrapper";
 import TopBar from "@/core/common/top-bar";
+import DotPattern from "@/components/ui/dot-pattern";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black transition-colors duration-300`}
       >
+        <DotPattern className="text-gray-300 dark:text-gray-700" />
         <TopBar />
         <Header />
         <ContentWrapper>

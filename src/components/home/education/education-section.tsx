@@ -10,7 +10,7 @@ import SectionHeader from '@/core/common/section-header'
 export default function EducationSection() {
     return (
         <BackgroundStyle>
-            <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 ">
                 <SectionHeader title="Education" />
 
                 <div className="relative">
