@@ -6,6 +6,7 @@ import Footer from "@/layouts/footer/footer";
 import ContentWrapper from "@/core/common/content-wrapper";
 import TopBar from "@/core/common/top-bar";
 import DotPattern from "@/components/ui/dot-pattern";
+import CursorEffect from "@/components/ui/cursor-effect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black transition-colors duration-300`}
       >
         <DotPattern className="text-gray-300 dark:text-gray-700" />
+        <CursorEffect />
         <TopBar />
         <Header />
         <ContentWrapper>
