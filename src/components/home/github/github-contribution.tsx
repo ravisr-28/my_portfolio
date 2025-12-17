@@ -58,7 +58,7 @@ export default function GitHubContributions() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
                 <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-gray-100 dark:bg-neutral-800 text-gray-900 dark:text-white">
+                    <div className="p-3 rounded-xl  text-gray-900 dark:text-white">
                         <FaGithub className="text-2xl" />
                     </div>
                     <div>
@@ -81,7 +81,6 @@ export default function GitHubContributions() {
                         onClick={() => setIsYearDropdownOpen(!isYearDropdownOpen)}
                         className="flex items-center justify-between gap-3 px-4 py-2.5 w-full sm:w-40
                         text-sm font-medium
-                        bg-white dark:bg-neutral-800 
                         border border-gray-200 dark:border-neutral-700
                         rounded-xl hover:border-gray-300 dark:hover:border-neutral-600
                         transition-all duration-200 shadow-sm"
@@ -172,55 +171,35 @@ export default function GitHubContributions() {
                     </div>
                 </div>
 
-                {/* Legend */}
-                <div className="flex items-center justify-end gap-3 text-xs font-medium text-gray-500 dark:text-neutral-400">
-                    <span>Less</span>
-                    <div className="flex gap-1.5 p-1 bg-gray-50 dark:bg-neutral-800/50 rounded-lg border border-gray-100 dark:border-neutral-800">
-                        <div className="w-3 h-3 rounded-[2px] bg-gray-100 dark:bg-neutral-800/50" />
-                        <div className="w-3 h-3 rounded-[2px] bg-blue-200 dark:bg-blue-900/40" />
-                        <div className="w-3 h-3 rounded-[2px] bg-blue-300 dark:bg-blue-700/60" />
-                        <div className="w-3 h-3 rounded-[2px] bg-blue-400 dark:bg-blue-600/80" />
-                        <div className="w-3 h-3 rounded-[2px] bg-blue-500 dark:bg-blue-500" />
+                {/* Stats and Legend */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6 pt-6 border-t border-gray-100 dark:border-neutral-800">
+                    {/* Stats */}
+                    <div className="flex flex-wrap items-center gap-4">
+                        <div className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white">
+                            <FaStar className="text-orange-500 dark:text-orange-400" />
+                            <span>{contributions.collection.contributionCalendar.totalContributions.toLocaleString()}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white">
+                            <FaCode className="text-blue-500 dark:text-blue-400" />
+                            <span>{contributions.publicRepos.toLocaleString()}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white">
+                            <FaUsers className="text-purple-500 dark:text-purple-400" />
+                            <span>{contributions.followers.toLocaleString()}</span>
+                        </div>
                     </div>
-                    <span>More</span>
-                </div>
-            </div>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-100 dark:border-neutral-800">
-                <div className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-neutral-800/30 border border-gray-100 dark:border-neutral-800">
-                    <div className="p-2.5 rounded-xl bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400">
-                        <FaStar className="text-lg" />
-                    </div>
-                    <div>
-                        <p className="text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase tracking-wider">Total Contributions</p>
-                        <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">
-                            {contributions.collection.contributionCalendar.totalContributions.toLocaleString()}
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-neutral-800/30 border border-gray-100 dark:border-neutral-800">
-                    <div className="p-2.5 rounded-xl bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400">
-                        <FaCode className="text-lg" />
-                    </div>
-                    <div>
-                        <p className="text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase tracking-wider">Repositories</p>
-                        <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">
-                            {contributions.publicRepos.toLocaleString()}
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-neutral-800/30 border border-gray-100 dark:border-neutral-800">
-                    <div className="p-2.5 rounded-xl bg-purple-100 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400">
-                        <FaUsers className="text-lg" />
-                    </div>
-                    <div>
-                        <p className="text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase tracking-wider">Followers</p>
-                        <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">
-                            {contributions.followers.toLocaleString()}
-                        </p>
+                    {/* Legend */}
+                    <div className="flex items-center gap-3 text-xs font-medium text-gray-500 dark:text-neutral-400">
+                        <span>Less</span>
+                        <div className="flex gap-1.5 p-1 bg-gray-50 dark:bg-neutral-800/50 rounded-lg border border-gray-100 dark:border-neutral-800">
+                            <div className="w-3 h-3 rounded-[2px] bg-gray-100 dark:bg-neutral-800/50" />
+                            <div className="w-3 h-3 rounded-[2px] bg-blue-200 dark:bg-blue-900/40" />
+                            <div className="w-3 h-3 rounded-[2px] bg-blue-300 dark:bg-blue-700/60" />
+                            <div className="w-3 h-3 rounded-[2px] bg-blue-400 dark:bg-blue-600/80" />
+                            <div className="w-3 h-3 rounded-[2px] bg-blue-500 dark:bg-blue-500" />
+                        </div>
+                        <span>More</span>
                     </div>
                 </div>
             </div>
