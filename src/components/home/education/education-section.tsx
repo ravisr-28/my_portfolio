@@ -1,122 +1,45 @@
+"use client";
+
 import BackgroundStyle from '@/core/common/background'
 import React from 'react'
-import { FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa'
-import Image from 'next/image'
 import { educationData } from './data/education-data'
 import { IEducation } from './data/education-data'
-import CardOverlayStyle from '@/core/common/card-overlay-style'
 import SectionHeader from '@/core/common/section-header'
+import EducationCard from './components/education-card'
+import Timeline from '@/core/common/timeline'
+import { motion } from 'framer-motion'
 
 export default function EducationSection() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
     return (
         <BackgroundStyle>
-            <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 ">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 py-8">
                 <SectionHeader title="Education" />
 
-                <div className="relative">
-                    {/* Timeline Line */}
-                    <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5">
-                        <div className="absolute inset-0 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300 
-                            dark:from-gray-600 dark:via-gray-500 dark:to-gray-600" />
-                        <div className="absolute inset-0 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300 
-                            dark:from-gray-600 dark:via-gray-500 dark:to-gray-600 opacity-50 blur-sm" />
-                    </div>
+                <div className="relative mt-8 sm:mt-12">
+                    {/* Shared Timeline Line */}
+                    <Timeline />
 
-                    <div className="space-y-8">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={containerVariants}
+                        className="space-y-4 sm:space-y-6"
+                    >
                         {educationData.map((edu: IEducation, index: number) => (
-                            <div
-                                key={index}
-                                className="relative pl-12 sm:pl-16 animate-slide-in group/timeline"
-                                style={{ animationDelay: `${index * 200}ms` }}
-                            >
-                                {/* Timeline Dot */}
-                                <div className="absolute left-3 sm:left-5 top-1.5">
-                                    <div className="relative">
-                                        {/* Outer Glow */}
-                                        <div className="absolute -inset-2 rounded-full bg-gray-400/20 dark:bg-gray-500/20 
-                                            group-hover/timeline:bg-gray-400/30 dark:group-hover/timeline:bg-gray-500/30 
-                                            transition-all duration-300 blur-sm" />
-
-                                        {/* Middle Ring */}
-                                        <div className="absolute -inset-1 rounded-full bg-gray-400/30 dark:bg-gray-500/30 
-                                            group-hover/timeline:bg-gray-400/40 dark:group-hover/timeline:bg-gray-500/40 
-                                            transition-all duration-300" />
-
-                                        {/* Main Dot */}
-                                        <div className="relative w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-500 
-                                            group-hover/timeline:scale-110 transition-transform duration-300">
-                                            <div className="absolute inset-0 rounded-full bg-gray-400 dark:bg-gray-500 animate-ping opacity-75" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="group relative bg-white dark:bg-gray-800/50 rounded-xl p-4 sm:p-6 
-                                    border border-gray-200 dark:border-gray-700/50 
-                                    hover:border-gray-300 dark:hover:border-gray-600/50 
-                                    transition-all duration-300 hover:shadow-xl
-                                    hover:scale-[1.02] transform">
-
-                                    {/* Institution Link */}
-                                    {edu.website && (
-                                        <a
-                                            href={edu.website}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="hidden md:block z-50 absolute top-4 right-4 p-1.5 rounded-lg bg-gray-100 dark:bg-gray-700/50
-                                        hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-colors duration-300
-                                        group/link"
-                                        >
-                                            <FaExternalLinkAlt className="text-gray-500 group-hover/link:text-gray-700 
-                                            dark:text-gray-400 dark:group-hover/link:text-gray-200" size={14} />
-                                        </a>
-                                    )}
-
-                                    <div className="flex items-start gap-4">
-                                        {/* Institution Logo */}
-                                        <div className="relative size-16 rounded-sm overflow-hidden bg-gray-100 dark:bg-gray-700/50
-                                            group-hover:shadow-md transition-shadow duration-300">
-                                            <Image
-                                                src={edu.logo}
-                                                alt={edu.institution}
-                                                fill
-                                                className="object-contain "
-                                            />
-                                        </div>
-
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 mb-2">
-                                                <div>
-                                                    <h3 className="text-sm md:text-lg font-semibold text-gray-800 dark:text-gray-100
-
-                                                        group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
-                                                        {edu.degree}
-                                                    </h3>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                                                        {edu.institution}
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            {/* Duration and Location */}
-                                            <div className="flex items-center flex-wrap gap-2 md:gap-4">
-                                                <div className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400">
-                                                    <FaCalendarAlt className="text-gray-500" size={14} />
-                                                    <span>{edu.duration}</span>
-                                                </div>
-                                                <div className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400">
-                                                    <FaMapMarkerAlt className="text-gray-500" size={14} />
-                                                    <span>{edu.location}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Decorative Elements */}
-                                    <CardOverlayStyle />
-                                </div>
-                            </div>
+                            <EducationCard key={index} edu={edu} index={index} />
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </BackgroundStyle>
