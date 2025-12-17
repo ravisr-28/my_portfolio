@@ -22,9 +22,9 @@ export default function Header() {
 
     return (
         <header className="max-w-5xl mx-3 md:mx-auto relative z-50 my-6 ">
-            <div className="dark:border-gray-800 px-3 pl-4 pr-2 md:px-4 md:py-2.5 bg-white/80 dark:bg-black/80 backdrop-blur-md 
+            <div className="dark:border-gray-800 px-3 pl-4 pr-2 md:px-4 md:py-2.5 backdrop-blur-md 
                 border boundary-border rounded-2xl shadow-sm dark:shadow-none
-                transition-all duration-300 dark:bg-gradient-to-br dark:from-neutral-500/10 dark:to-blue-500/5">
+                transition-all duration-300  ">
                 <div className="flex items-center justify-between">
                     {/* Logo/Brand */}
                     <Link

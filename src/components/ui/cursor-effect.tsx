@@ -43,7 +43,7 @@ const CursorEffect = () => {
             const dy = y - lastMouse.current.y;
             const speed = Math.sqrt(dx * dx + dy * dy);
 
-            const count = Math.min(Math.floor(speed * 0.1), 5); // Cap particles per frame
+            const count = Math.min(Math.floor(speed * 0.05), 1); // Cap particles per frame
 
             for (let i = 0; i < count; i++) {
                 particles.current.push({
