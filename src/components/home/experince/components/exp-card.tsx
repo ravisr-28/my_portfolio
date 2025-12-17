@@ -5,7 +5,7 @@ import { PiBuildingOffice } from 'react-icons/pi'
 import { IoPerson } from 'react-icons/io5'
 import { motion } from 'framer-motion'
 
-export default function ExperienceCard({ exp, index }: { exp: IExperience, index: number }) {
+export default function ExperienceCard({ exp, }: { exp: IExperience, index: number }) {
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {

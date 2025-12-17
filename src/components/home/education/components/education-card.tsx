@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa
 import { IEducation } from '../data/education-data'
 import { motion } from 'framer-motion'
 
-export default function EducationCard({ edu, index }: { edu: IEducation, index: number }) {
+export default function EducationCard({ edu, }: { edu: IEducation, index: number }) {
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {

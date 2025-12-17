@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaCalendarAlt, FaAward } from 'react-icons/fa'
 import { ICertification } from '@/types/certification-types'
 import { motion } from 'framer-motion'
 
-export default function CertificationsCard({ cert, index }: { cert: ICertification, index: number }) {
+export default function CertificationsCard({ cert }: { cert: ICertification, index: number }) {
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {

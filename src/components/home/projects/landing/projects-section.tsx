@@ -2,7 +2,7 @@
 
 import BackgroundStyle from '@/core/common/background'
 import React, { useState, useEffect } from 'react'
-import { FaGithub, FaExternalLinkAlt, FaGlobe, FaRobot, FaMobile, FaArrowRight } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaGlobe, FaRobot, FaMobile } from 'react-icons/fa'
 import Image from 'next/image'
 import { projectsData } from '../data/projects-data'
 import SectionHeader from '@/core/common/section-header'

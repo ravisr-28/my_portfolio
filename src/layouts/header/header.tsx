@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { IoClose } from 'react-icons/io5'
 import { RiMenu3Line } from 'react-icons/ri'
-import BackgroundStyle from '@/core/common/background'
 
 export default function Header() {
     const pathname = usePathname()
