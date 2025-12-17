@@ -1,10 +1,22 @@
+"use client";
+
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import Link from 'next/link'
 import CardOverlayStyle from '@/core/common/card-overlay-style'
+import ServicesFallback from '@/core/fallback/services-fallback'
 
 export default function ServicesSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 550);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <ServicesFallback />;
+
     return (
         <BackgroundStyle>
             <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2">

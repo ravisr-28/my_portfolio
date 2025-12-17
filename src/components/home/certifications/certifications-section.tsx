@@ -1,14 +1,24 @@
 "use client";
 
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { certifications } from './data/certifications-data'
 import CertificationsCard from './components/certifications-card'
 import SectionHeader from '@/core/common/section-header'
 import { ICertification } from '@/types/certification-types'
 import { motion } from 'framer-motion'
+import CertificationsFallback from '@/core/fallback/certifications-fallback'
 
 export default function CertificationsSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 750);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <CertificationsFallback />;
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

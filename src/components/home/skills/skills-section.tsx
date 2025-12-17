@@ -1,10 +1,21 @@
+"use client"
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SectionHeader from '@/core/common/section-header'
 import { skillCategories } from '@/data/skills-data'
 import { ISkillCategory } from '@/types/skills-types'
+import SkillsFallback from '@/core/fallback/skills-fallback'
 
 export default function SkillsSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 600);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <SkillsFallback />;
+
     return (
         <BackgroundStyle>
             <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2">

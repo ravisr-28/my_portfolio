@@ -1,14 +1,24 @@
 "use client";
 
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaGithub, FaExternalLinkAlt, FaGlobe, FaRobot, FaMobile, FaArrowRight } from 'react-icons/fa'
 import Image from 'next/image'
 import { projectsData } from '../data/projects-data'
 import SectionHeader from '@/core/common/section-header'
 import { motion } from 'framer-motion'
+import ProjectsFallback from '@/core/fallback/projects-fallback'
 
 export default function ProjectsSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 700);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <ProjectsFallback />;
+
     const getProjectTypeIcon = (type: string) => {
         switch (type) {
             case 'website':

@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { RiVerifiedBadgeFill, RiMapPin2Fill, RiMailSendLine } from 'react-icons/ri'
@@ -8,8 +8,19 @@ import { FiHeart, FiFileText } from 'react-icons/fi'
 import BackgroundStyle from '../../../core/common/background'
 import { socialLinks } from '@/data/hero-data'
 import { motion } from 'framer-motion'
+import HeroFallback from '@/core/fallback/hero-fallback'
 
 export default function HeroSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate loading delay
+        const timer = setTimeout(() => setLoading(false), 800);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <HeroFallback />;
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

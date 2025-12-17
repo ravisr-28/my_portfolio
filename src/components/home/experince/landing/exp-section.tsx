@@ -1,15 +1,25 @@
 "use client";
 
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { experiences } from '../data/exp-data'
 import SectionHeader from '@/core/common/section-header'
 import ExperienceCard from '../components/exp-card'
 import { IExperience } from '@/types/exp-types'
 import Timeline from '@/core/common/timeline'
 import { motion } from 'framer-motion'
+import ExperienceFallback from '@/core/fallback/experience-fallback'
 
 export default function ExperienceSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 650);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <ExperienceFallback />;
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

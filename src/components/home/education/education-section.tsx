@@ -1,15 +1,25 @@
 "use client";
 
 import BackgroundStyle from '@/core/common/background'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { educationData } from './data/education-data'
 import { IEducation } from './data/education-data'
 import SectionHeader from '@/core/common/section-header'
 import EducationCard from './components/education-card'
 import Timeline from '@/core/common/timeline'
 import { motion } from 'framer-motion'
+import EducationFallback from '@/core/fallback/education-fallback'
 
 export default function EducationSection() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 680);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <EducationFallback />;
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
