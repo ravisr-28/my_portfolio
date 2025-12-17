@@ -20,7 +20,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="max-w-6xl mx-3 pl-3 pr-2 md:px-4 md:py-2  md:mx-auto relative bg-white/95 dark:bg-black/95 z-50 
+        <header className="max-w-5xl mx-3 pl-3 pr-2 md:px-4 md:py-2  md:mx-auto relative bg-white/95 dark:bg-black/95 z-50 
             border rounded-lg border-gray-200 dark:border-gray-800 my-4 
             shadow-lg shadow-gray-100 dark:shadow-none
             transition-all duration-300">

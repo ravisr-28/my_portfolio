@@ -43,7 +43,7 @@ const CursorEffect = () => {
             const dy = y - lastMouse.current.y;
             const speed = Math.sqrt(dx * dx + dy * dy);
 
-            const count = Math.min(Math.floor(speed * 0.2), 5); // Cap particles per frame
+            const count = Math.min(Math.floor(speed * 0.1), 5); // Cap particles per frame
 
             for (let i = 0; i < count; i++) {
                 particles.current.push({
@@ -82,19 +82,6 @@ const CursorEffect = () => {
                 ctx.fill();
             }
 
-            // Draw Custom Cursor
-            // Outer Ring
-            ctx.beginPath();
-            ctx.arc(mouse.current.x, mouse.current.y, 10, 0, Math.PI * 2);
-            ctx.strokeStyle = "rgba(211, 211, 211, 1)"; // Emerald-500
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-
-            // Inner Dot
-            ctx.beginPath();
-            ctx.arc(mouse.current.x, mouse.current.y, 2, 0, Math.PI * 2);
-            ctx.fillStyle = "rgba(211, 211, 211, 1)"; // Emerald-500
-            ctx.fill();
 
             animationFrameId = requestAnimationFrame(animate);
         };
@@ -102,8 +89,7 @@ const CursorEffect = () => {
         window.addEventListener("resize", resizeCanvas);
         window.addEventListener("mousemove", handleMouseMove);
 
-        // Hide default cursor
-        document.body.style.cursor = 'none';
+
 
         resizeCanvas();
         animate();
@@ -112,8 +98,7 @@ const CursorEffect = () => {
             window.removeEventListener("resize", resizeCanvas);
             window.removeEventListener("mousemove", handleMouseMove);
             cancelAnimationFrame(animationFrameId);
-            // Restore default cursor
-            document.body.style.cursor = 'auto';
+
         };
     }, []);
 
