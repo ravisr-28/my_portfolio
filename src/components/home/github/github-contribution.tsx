@@ -81,8 +81,8 @@ export default function GitHubContributions() {
                         onClick={() => setIsYearDropdownOpen(!isYearDropdownOpen)}
                         className="flex items-center justify-between gap-3 px-4 py-2.5 w-full sm:w-40
                         text-sm font-medium
-                        border border-gray-200 dark:border-neutral-700
-                        rounded-xl hover:border-gray-300 dark:hover:border-neutral-600
+                        border border-gray-200 dark:border-gray-800
+                        rounded-xl hover:border-gray-300 dark:hover:border-gray-800
                         transition-all duration-200 shadow-sm"
                     >
                         <span>Year: {selectedYear}</span>
@@ -97,8 +97,7 @@ export default function GitHubContributions() {
                                 exit={{ opacity: 0, y: 5, scale: 0.95 }}
                                 transition={{ duration: 0.1 }}
                                 className="absolute right-0 mt-2 w-full 
-                                bg-white dark:bg-neutral-800 
-                                border border-gray-200 dark:border-neutral-700 
+                                border border-gray-200 dark:border-gray-800 
                                 rounded-xl py-1.5 shadow-xl overflow-hidden"
                             >
                                 {years.map((year) => (
@@ -111,7 +110,7 @@ export default function GitHubContributions() {
                                         className={`w-full px-4 py-2 text-left text-sm font-medium transition-colors
                                             ${selectedYear === year
                                                 ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                                                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-700/50'
+                                                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                                             }`}
                                     >
                                         {year}
