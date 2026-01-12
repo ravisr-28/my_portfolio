@@ -1,12 +1,30 @@
 "use client";
-import { ReactLenis } from "lenis/react";
 
-function SmoothScrolling({ children }: { children: React.ReactNode }) {
-    return (
-        <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-            {children}
-        </ReactLenis>
-    );
+import { useEffect } from "react";
+import Lenis from "lenis";
+
+export default function SmoothScrolling() {
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 1.5, // The duration of the scroll animation
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smoother feel
+            orientation: "vertical", // Scroll orientation
+            gestureOrientation: "vertical", // Gesture orientation
+            smoothWheel: true, // Enable smooth scrolling for mouse wheel events
+            touchMultiplier: 2, // Multiplier for touch events
+        });
+
+        const raf = (time: number) => {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        };
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
+
+    return null;
 }
-
-export default SmoothScrolling;
