@@ -7,6 +7,7 @@ import ContentWrapper from "@/core/common/content-wrapper";
 import TopBar from "@/core/common/top-bar";
 import CursorEffect from "@/components/ui/cursor-effect";
 import InteractiveBackground from "@/components/ui/interactive-background";
+import SmoothScrolling from "@/components/common/smooth-scrolling";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,14 +34,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black transition-colors duration-300`}
       >
-        <InteractiveBackground />
-        <CursorEffect />
-        <TopBar />
-        <Header />
-        <ContentWrapper>
-          {children}
-          <Footer />
-        </ContentWrapper>
+        <SmoothScrolling>
+          <InteractiveBackground />
+          <CursorEffect />
+          <TopBar />
+          <Header />
+          <ContentWrapper>
+            {children}
+            <Footer />
+          </ContentWrapper>
+        </SmoothScrolling>
       </body>
     </html>
   );
