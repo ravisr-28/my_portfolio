@@ -67,21 +67,20 @@ export default function HeroSection() {
                 {/* Profile Banner */}
                 <motion.div
                     variants={itemVariants}
-                    className="h-28 sm:h-36 overflow-hidden rounded-t-lg -mt-6 -mx-6 relative group"
+                    className="h-28 sm:h-36 overflow-hidden rounded-t-lg -mt-4 -mx-6 relative group"
                 >
-                    <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-black/10" />
                     <motion.div
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
-                        className="w-full h-full"
+                        className="w-full h-full overflow-hidden"
                     >
                         <Image
                             src="/profile/profile_banner.png"
                             alt="Profile Banner"
                             width={1000}
                             height={1000}
-                            className='object-cover object-center w-full h-full opacity-50 group-hover:scale-105 transition-transform duration-700 '
+                            className='object-cover object-center w-full h-full opacity-20 group-hover:scale-105 transition-transform duration-700 '
                             priority
                         />
                     </motion.div>

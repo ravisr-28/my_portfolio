@@ -2,13 +2,22 @@ import React from 'react'
 
 export default function BackgroundStyle({ children, className = '' }: { children: React.ReactNode, className?: string }) {
     return (
-        <div className={`relative p-6 rounded-lg 
-            border border-gray-200/60 dark:border-gray-800 
-            shadow-lg backdrop-blur-sm
-            transition-all duration-300
-            hover:shadow-xl hover:border-gray-300 dark:hover:border-gray-700
-            hover:-translate-y-1 ${className}`}>
-            {children}
+        <div className="w-full relative z-10">
+            <div className="relative w-full bg-transparent border-b border-gray-200 dark:border-gray-600/50 ">
+
+                {/* Inner Centered Container */}
+                <div className={`relative mx-auto px-4 sm:px-6 py-6 sm:py-10 max-w-5xl ${className}`}>
+                    {/* Vertical Lines */}
+                    <div className="absolute left-0 -top-3 bottom-0 w-px bg-gray-200 dark:bg-gray-600/50" />
+                    <div className="absolute right-0 -top-3 bottom-0 w-px bg-gray-200 dark:bg-gray-600/50" />
+
+                    {/* Bottom Corner Squares */}
+                    <div className="absolute -bottom-[3.5px] -left-[3.5px] w-1.5 h-1.5 bg-gray-900 dark:bg-gray-500 z-20" />
+                    <div className="absolute -bottom-[3.5px] -right-[3.5px] w-1.5 h-1.5 bg-gray-900 dark:bg-gray-500 z-20" />
+
+                    {children}
+                </div>
+            </div>
         </div>
     )
 }

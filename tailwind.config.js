@@ -17,11 +17,11 @@ const config = {
         dark: {
           primary: "#000000",
           secondary: "#111827",
-          accent: "#10b981",
+          accent: "#ea580c", // Orange-600
           text: {
             primary: "#f3f4f6",
             secondary: "#9ca3af",
-            accent: "#34d399",
+            accent: "#f97316", // Orange-500
           },
         },
       },

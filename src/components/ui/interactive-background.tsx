@@ -120,7 +120,8 @@ export default function InteractiveBackground() {
 
                 if (distance < 150) {
                     const opacity = (150 - distance) / 150;
-                    ctx.strokeStyle = `rgba(59, 130, 246, ${opacity * 0.4})`;
+                    // Gray-400: 156, 163, 175
+                    ctx.strokeStyle = `rgba(156, 163, 175, ${opacity * 0.4})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1.y);
@@ -139,20 +140,20 @@ export default function InteractiveBackground() {
                 if (distance < 150) {
                     const opacity = (150 - distance) / 150;
 
-                    // Glow
+                    // Glow - Gray
                     const gradient = ctx.createRadialGradient(
                         particle.x, particle.y, 0,
                         particle.x, particle.y, 8
                     );
-                    gradient.addColorStop(0, `rgba(59, 130, 246, ${opacity * 0.4})`);
-                    gradient.addColorStop(1, `rgba(59, 130, 246, 0)`);
+                    gradient.addColorStop(0, `rgba(156, 163, 175, ${opacity * 0.4})`);
+                    gradient.addColorStop(1, `rgba(156, 163, 175, 0)`);
 
                     ctx.fillStyle = gradient;
                     ctx.beginPath();
                     ctx.arc(particle.x, particle.y, 8, 0, Math.PI * 2);
                     ctx.fill();
 
-                    ctx.fillStyle = `rgba(59, 130, 246, ${opacity})`;
+                    ctx.fillStyle = `rgba(156, 163, 175, ${opacity})`;
                 } else {
                     ctx.fillStyle = "rgba(100, 116, 139, 0.4)";
                 }
@@ -180,24 +181,31 @@ export default function InteractiveBackground() {
 
     return (
         <>
-            {/* Canvas for particle network */}
-            <canvas
-                ref={canvasRef}
-                className="pointer-events-none fixed inset-0 z-[-2] opacity-0 dark:opacity-100 transition-opacity duration-500"
-                style={{ width: "100%", height: "100%" }}
-            />
+            {/* Video Background */}
+            <div className="fixed inset-0 z-[-5] overflow-hidden pointer-events-none">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute  inset-0 w-full h-full object-cover opacity-20 dark:opacity-10"
+                >
+                    <source src="/test.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
+            </div>
 
-            {/* Subtle cursor glow */}
+            {/* Subtle cursor glow - Gray */}
             <motion.div
                 className="pointer-events-none fixed inset-0 z-[-1] opacity-0 dark:opacity-100 transition-opacity duration-500"
                 style={{
-                    background: `radial-gradient(400px circle at ${smoothMouseX}px ${smoothMouseY}px, rgba(59, 130, 246, 0.03), transparent 70%)`,
+                    background: `radial-gradient(600px circle at ${smoothMouseX}px ${smoothMouseY}px, rgba(156, 163, 175, 0.05), transparent 60%)`, // Gray glow
                 }}
             />
 
-            {/* Minimal ambient gradient */}
+            {/* Minimal ambient gradient - Neutral hue */}
             <div className="pointer-events-none fixed inset-0 z-[-3] opacity-0 dark:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 " />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/5 to-transparent" />
             </div>
         </>
     );

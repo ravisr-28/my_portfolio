@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 dark:bg-black transition-colors duration-300`}
       >
         <SmoothScrolling />
         <InteractiveBackground />
