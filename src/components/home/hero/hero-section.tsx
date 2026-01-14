@@ -201,17 +201,20 @@ export default function HeroSection() {
                                     href="/exp/resume.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group px-5 py-2 text-sm font-medium 
-                                        bg-gray-900 text-white dark:bg-white dark:text-gray-900
-                                        rounded-xl border border-transparent
-                                        hover:bg-gray-800 dark:hover:bg-gray-100
+                                    className="group relative px-5 py-2 text-sm font-medium 
+                                        bg-gray-200/50 dark:bg-gray-800/50 text-gray-900 dark:text-white
+                                        rounded-xl border border-gray-200 dark:border-gray-700
+                                        overflow-hidden
                                         shadow-lg hover:shadow-xl
                                         transition-all duration-300
                                         flex items-center gap-2"
                                 >
-                                    <FiFileText className="w-4 h-4" />
-                                    <span>Resume</span>
-                                    <span className="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300">→</span>
+                                    <span className="absolute inset-0 w-full py-16 px-24 h-full bg-white dark:bg-white transition-transform duration-750 ease-out transform translate-y-1/3 -rotate-12 -translate-x-full group-hover:translate-x-0 group-hover:translate-y-0 origin-bottom-left z-0" />
+                                    <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-gray-900 dark:group-hover:text-gray-900">
+                                        <FiFileText className="w-4 h-4" />
+                                        <span>Resume</span>
+                                        <span className="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300">→</span>
+                                    </span>
                                 </Link>
                             </motion.div>
                         </motion.div>

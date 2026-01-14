@@ -8,6 +8,7 @@ import TopBar from "@/core/common/top-bar";
 import CursorEffect from "@/components/ui/cursor-effect";
 import InteractiveBackground from "@/components/ui/interactive-background";
 import SmoothScrolling from "@/components/common/smooth-scrolling";
+import FloatingContactButton from "@/components/common/floating-contact-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ContentWrapper>
+        <FloatingContactButton />
       </body>
     </html>
   );

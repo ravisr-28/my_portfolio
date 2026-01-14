@@ -12,7 +12,7 @@ export default function TopBar() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(true);
-        }, 750);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -30,7 +30,7 @@ export default function TopBar() {
                     }}
                     className="relative w-full overflow-hidden bg-gradient-to-r from-gray-900/10 via-gray-800/15 to-gray-900/10 
                         dark:from-gray-900/20 dark:via-gray-800/30 dark:to-gray-900/20 
-                        border-b border-gray-800/30 backdrop-blur-sm mb-4"
+                        border-gray-800/30 backdrop-blur-sm "
                 >
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

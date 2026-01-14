@@ -188,7 +188,7 @@ export default function InteractiveBackground() {
                     loop
                     muted
                     playsInline
-                    className="absolute  inset-0 w-full h-full object-cover opacity-20 dark:opacity-10"
+                    className="absolute  inset-0 w-full h-full object-cover opacity-20 dark:opacity-20"
                 >
                     <source src="/test.mp4" type="video/mp4" />
                 </video>
