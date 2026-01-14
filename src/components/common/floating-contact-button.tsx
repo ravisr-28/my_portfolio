@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { MessageCircle, MessagesSquare } from 'lucide-react'
+import { MessagesSquare } from 'lucide-react'
 
 export default function FloatingContactButton() {
     return (

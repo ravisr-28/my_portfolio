@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface HackerTextProps {
     text: string;
@@ -17,7 +17,7 @@ const HackerText: React.FC<HackerTextProps> = ({ text, className = "" }) => {
         clearInterval(intervalRef.current as NodeJS.Timeout);
 
         intervalRef.current = setInterval(() => {
-            setDisplayText((prev) =>
+            setDisplayText(() =>
                 text
                     .split("")
                     .map((char, index) => {
