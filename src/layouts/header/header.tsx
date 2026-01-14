@@ -46,27 +46,37 @@ export default function Header() {
                         </Link>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden md:flex items-center gap-8 pr-4">
+                        <nav className="hidden md:flex items-center gap-4">
                             {navItems.map((item) => {
                                 const isActive = pathname === item.href
                                 return (
                                     <Link
                                         key={item.href}
                                         href={item.href}
-                                        className={`relative text-sm font-medium transition-colors duration-300 uppercase tracking-wide
+                                        className={`group relative px-1 py-1 text-sm font-medium transition-all duration-300 capitalize tracking-wide
                                             ${isActive
-                                                ? 'text-gray-900 dark:text-white'
-                                                : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                                                ? 'text-gray-900 dark:text-white font-semibold'
+                                                : 'text-gray-500 dark:text-gray-400'
                                             }`}
                                     >
-                                        {item.label}
-                                        {isActive && (
+                                        <div className="relative overflow-hidden">
+                                            <div className="relative transition-transform duration-500 ease-spring group-hover:-translate-y-full">
+                                                {/* Default Text */}
+                                                <span className="block">{item.label}</span>
+                                                {/* Hover (Flip) Text */}
+                                                <span className="absolute top-full left-0 block w-full text-gray-900 dark:text-gray-100 font-semibold">
+                                                    {item.label}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        {/* {isActive && (
                                             <motion.div
                                                 layoutId="activeTab"
-                                                className="absolute -bottom-[1px] left-0 right-0 h-px bg-gray-900 dark:bg-white"
-                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gray-900 dark:bg-white"
+                                                transition={{ type: "spring", stiffness: 350, damping: 30 }}
                                             />
-                                        )}
+                                        )} */}
                                     </Link>
                                 )
                             })}
