@@ -201,7 +201,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.98 }}
               >
                 <a
-                  href="/exp/resume.pdf"
+                  href="/exp/full-stack-developer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-5 py-2 text-sm font-medium bg-gray-200/50 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
