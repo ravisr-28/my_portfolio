@@ -114,6 +114,43 @@ export const projectsData = [
         "JWT authentication, role-based access control, and third-party API integration",
     },
   },
+  {
+    id: "digital-heroes",
+    title: "Digital Heroes Assignment",
+    subtitle:
+      "Full-stack web application for managing users, scores, subscriptions, and charity contributions",
+    projectType: "website",
+    description:
+      "A full-stack web platform that allows users to register, subscribe to plans, participate in draws, manage scores, and contribute to charity. The system includes role-based access, verification flows, and admin controls to manage users and platform activities.",
+    images: [
+      "/projects/digital-heroes/dh-01.png",
+      "/projects/digital-heroes/dh-02.png",
+      "/projects/digital-heroes/dh-03.png",
+    ],
+    githubUrl: "#",
+    liveUrl: "https://digital-heroes-assignment-h13e.vercel.app/",
+    technologies: ["ReactJs", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    featured: true,
+    challenges: [
+      "Implementing secure JWT authentication with role-based access control",
+      "Handling subscription-based restrictions for API access",
+      "Designing scalable backend architecture with multiple modules (auth, scores, draws, charity)",
+    ],
+    impact: [
+      "Provides a structured system for managing users and subscriptions",
+      "Ensures fair participation through controlled access and verification",
+      "Encourages social impact via integrated charity contribution system",
+    ],
+    role: "Full Stack Developer",
+    duration: "3-5 days",
+    techStack: {
+      frontend: "React + Tailwind CSS",
+      backend: "Node.js + Express with MongoDB",
+      devops: "Deployed on Vercel, backend APIs structured for scalability",
+      extras:
+        "JWT authentication, protected routes, subscription logic, charity percentage enforcement, and modular API design",
+    },
+  },
 ];
 
 export const projectTabs = [
