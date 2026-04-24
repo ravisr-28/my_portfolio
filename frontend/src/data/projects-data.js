@@ -79,6 +79,49 @@ export const projectsData = [
     },
   },
   {
+    id: "delhi-pollution-tracker",
+    title: "Delhi Pollution Tracker",
+    subtitle: "Real-time Air Quality Monitoring System",
+    projectType: "website",
+    description:
+      "A web application that provides real-time air quality data for Delhi, allowing users to monitor pollution levels across different areas. It visualizes AQI data using interactive maps and charts, helping users stay informed and make safer travel or outdoor decisions.",
+    images: [
+      "/projects/delhi-pollution-tracker/dpt_01.png",
+      "/projects/delhi-pollution-tracker/dpt_02.png",
+      "/projects/delhi-pollution-tracker/dpt_03.png",
+    ],
+    githubUrl: "https://github.com/ravisr-28",
+    liveUrl: "https://delhi-pollution-tracker.vercel.app/",
+    technologies: [
+      "React",
+      "Node.js",
+      "ExpressJs",
+      "MongoDB",
+      "OpenWeather API / AQI API",
+      "Chart.js",
+    ],
+    featured: true,
+    challenges: [
+      "Fetching and displaying real-time AQI data efficiently",
+      "Visualizing pollution data in an intuitive way",
+      "Handling API rate limits and data consistency",
+    ],
+    impact: [
+      "Helps users stay aware of air quality conditions",
+      "Promotes health-conscious decisions",
+      "Provides easy-to-understand pollution insights",
+    ],
+    role: "Full Stack Developer",
+    duration: "1-2 months",
+    techStack: {
+      frontend: "React for dynamic UI and data visualization",
+      backend: "Node.js + Express for API handling and data processing",
+      apis: "AQI APIs for real-time pollution data",
+      extras:
+        "Interactive charts, location-based AQI tracking, and responsive design",
+    },
+  },
+  {
     id: "playnex",
     title: "PlayNex",
     subtitle:
