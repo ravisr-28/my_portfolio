@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-[4px] border-white dark:border-[#0F1115] shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing transition-all duration-300 z-20"
           >
             <img
-              src="/profile/ravi-dp.JPG"
+              src="/profile/ravi-dp.jpg"
               alt="Profile Photo"
               className="object-cover object-center w-full h-full"
             />

@@ -8,7 +8,7 @@ export const projectsData = [
     projectType: "website",
     description:
       "A full-stack real-time chat application that enables users to communicate instantly with features like authentication, private chats, and responsive UI.",
-    images: ["/projects/letschat/lc_01.png"],
+    images: ["/projects/letschat/lc_01.png", "/projects/letschat/lc_02.png"],
     githubUrl: "https://github.com/ravisr-28",
     liveUrl: "https://let-schat.vercel.app/",
     technologies: [
@@ -166,9 +166,7 @@ export const projectsData = [
     description:
       "A full-stack web platform that allows users to register, subscribe to plans, participate in draws, manage scores, and contribute to charity. The system includes role-based access, verification flows, and admin controls to manage users and platform activities.",
     images: [
-      "/projects/digital-heroes/dh-01.png",
-      "/projects/digital-heroes/dh-02.png",
-      "/projects/digital-heroes/dh-03.png",
+      "/projects/digital-heroes/dh_01.png",
     ],
     githubUrl: "#",
     liveUrl: "https://digital-heroes-assignment-h13e.vercel.app/",
