@@ -1,14 +1,4 @@
 export const certifications = [
-//   {
-//     title: "Programming in Python: A Hands-on Introduction",
-//     organization: "Codio",
-//     issueDate: "Feb 2025",
-//     credentialId: "AWS-123456",
-//     credentialUrl:
-//       "https://coursera.org/share/049242f07cee7fd9cf2c1c7cbceed16f",
-//     organizationLogo: "/certificates/company-logo/codio-logo.png",
-//     certificateImage: "/certificates/pythons-fundamentals.png",
-//   },
   {
     title:
       "Training and Internship Certification in Full Stack Web Development with Gen AI + DSA",
@@ -19,5 +9,14 @@ export const certifications = [
     organizationLogo: "/certificates/coding_ninjas_logo.png",
     certificateImage: "/certificates/certificate_01.jpg",
   },
+  {
+    title:
+      "Project Completion Certificate – Full-Stack AI-Enabled Online Quiz and Assessment Platform",
+    organization: "Qollabb (Pinsout)",
+    issueDate: "Jul 2026",
+    credentialId: "20530072026",
+    credentialUrl: "",
+    organizationLogo: "/certificates/qollab_logo.png",
+    certificateImage: "/certificates/certificate_02.png",
+  },
 ];
-
