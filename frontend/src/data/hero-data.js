@@ -16,7 +16,7 @@ export const socialLinks = [
   },
   {
     icon: FaLinkedin,
-    href: "https://www.linkedin.com/in/ravi-shankar-kumar-0a58403a6/",
+    href: "https://www.linkedin.com/in/ravishankar28/",
     label: "LinkedIn",
     color: "hover:text-[#0077b5]",
   },

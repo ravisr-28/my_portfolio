@@ -85,7 +85,32 @@ export default function GithubContribution() {
             </div>
         </BackgroundStyle>
     )
-    if (error || !contributions) return null
+    if (error || !contributions) return (
+        <BackgroundStyle className="p-6 md:p-8">
+            <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-xl text-gray-900 dark:text-white">
+                    <FaGithub className="text-2xl" />
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">GitHub Activity</h2>
+                    <a href="https://github.com/ravisr-28" target="_blank" rel="noopener noreferrer"
+                        className="text-sm font-medium text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                        @ravisr-28
+                    </a>
+                </div>
+            </div>
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+                <FaGithub className="text-4xl text-gray-300 dark:text-neutral-600 mb-4" />
+                <p className="text-sm text-gray-500 dark:text-neutral-400 font-medium">
+                    {error ? 'Unable to load GitHub contributions.' : 'GitHub contributions are unavailable.'}
+                </p>
+                <a href="https://github.com/ravisr-28" target="_blank" rel="noopener noreferrer"
+                    className="mt-3 text-sm font-medium text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
+                    View profile on GitHub →
+                </a>
+            </div>
+        </BackgroundStyle>
+    )
 
     return (
         <BackgroundStyle className="p-6 md:p-8">

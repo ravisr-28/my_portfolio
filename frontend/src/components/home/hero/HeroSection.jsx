@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-[4px] border-white dark:border-[#0F1115] shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing transition-all duration-300 z-20"
           >
             <img
-              src="/profile/ravi-dp.jpg"
+              src="/profile/ravi-dp2.jpeg"
               alt="Profile Photo"
               className="object-cover object-center w-full h-full"
             />
@@ -201,7 +201,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.98 }}
               >
                 <a
-                  href="/exp/ravishankar-resume.pdf"
+                  href="/exp/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-5 py-2 text-sm font-medium bg-gray-200/50 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
